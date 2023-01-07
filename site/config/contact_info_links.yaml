@@ -1,0 +1,5 @@
+- css_id: email-action
+  title: e-mail
+  value: lucy.diamond@someemailbox.com
+  url: mailto:lucy.diamond@someemailbox.com
+  

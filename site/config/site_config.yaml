@@ -1,0 +1,13 @@
+html_doc_title: Some awesome site
+html_doc_description: My awesome site based on the Layin layout system
+html_doc_keywords: awesome site, layin example
+html_doc_author:
+  name: Lucy Diamond
+  email: lucy.diamond@someemailbox.com
+html_doc_charset: utf-8
+html_doc_language: english
+html_doc_language_code: en-EN
+header_title: The awesome site
+header_subtitle: A good place on the web
+footer_copyright_range: 2023
+footer_site_name: The awesome site

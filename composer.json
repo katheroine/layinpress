@@ -14,6 +14,10 @@
         "psr-4": {
             "Katheroine\\LayinPress\\": [
                 "src/"
+            ],
+            "Katheroine\\LayinPress\\Preconfiguration\\": [
+                "site/preconfigurations/",
+                "site/preconfigurations/page_renderers/"
             ]
         }
     },
