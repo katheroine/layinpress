@@ -1,13 +1,13 @@
-html_doc_title: Some awesome site
-html_doc_description: My awesome site based on the Layin layout system
-html_doc_keywords: awesome site, layin example
+html_doc_title: LayinPress
+html_doc_description: LayinPress - WordPress theme coded in the modern way
+html_doc_keywords: layinpress,layin,layout,wordpress,wordpress theme,theme,modern WordPress,www,web page
 html_doc_author:
-  name: Lucy Diamond
-  email: lucy.diamond@someemailbox.com
+  name: katheroine
+  email: katheroine@gmail.com
 html_doc_charset: utf-8
 html_doc_language: english
-html_doc_language_code: en-EN
-header_title: The awesome site
-header_subtitle: A good place on the web
+html_doc_language_code: en-GB
+header_title: LayinPress
+header_subtitle: WordPress theme coded in the modern way
 footer_copyright_range: 2023
-footer_site_name: The awesome site
+footer_site_name: LayinPress
