@@ -13,13 +13,13 @@ namespace Katheroine\LayinPress\Preconfiguration;
 
 use Katheroine\Layin\Renderer\AbstractPageRenderer;
 use Katheroine\Layin\Renderer\AbstractVioletPreconfiguredPageRenderer;
-use Katheroine\Layin\Renderer\TwigPageRenderer;
+use Katheroine\LayinPress\Renderer\TimberPageRenderer;
 
 abstract class AbstractBasePreconfiguredPageRenderer extends AbstractVioletPreconfiguredPageRenderer
 {
     protected function providePageRenderer(): AbstractPageRenderer
     {
-        return new TwigPageRenderer();
+        return new TimberPageRenderer();
     }
 
     abstract protected function providePreconfiguration(): array;

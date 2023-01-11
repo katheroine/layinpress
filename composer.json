@@ -15,6 +15,9 @@
             "Katheroine\\LayinPress\\": [
                 "src/"
             ],
+            "Katheroine\\LayinPress\\Renderer\\": [
+                "src/renderers/"
+            ],
             "Katheroine\\LayinPress\\Preconfiguration\\": [
                 "site/preconfigurations/",
                 "site/preconfigurations/page_renderers/"
@@ -25,6 +28,12 @@
         "psr-4": {
             "Katheroine\\LayinPress\\": [
                 "tests/"
+            ],
+            "Katheroine\\LayinPress\\Renderer\\": [
+                "tests/unit_tests/renderers/"
+            ],
+            "Katheroine\\Layin\\Renderer\\": [
+                "vendor/katheroine/layin/tests/unit_tests/renderers/concrete_renderer_dummies/"
             ]
         }
     },
