@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Layin package.
+ * This file is part of the LayinPress package.
  *
  * (c) Katarzyna Krasińska <katheroine@gmail.com>
  *

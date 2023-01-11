@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 /*
- * This file is part of the Layin package.
+ * This file is part of the LayinPress package.
  *
  * (c) Katarzyna Krasińska <katheroine@gmail.com>
  *
@@ -17,7 +17,7 @@ use PHPUnit\Framework\TestCase;
 use Katheroine\Layin\Renderer\ConcretePageRenderer;
 
 /**
- * Twig page renderer tests.
+ * Timber page renderer tests.
  *
  * @package Renderer
  * @author Katarzyna Krasińska <katheroine@gmail.com>
@@ -63,7 +63,6 @@ class TimberPageRendererTest extends TestCase
     {
         $pageRenderer = new TimberPageRenderer();
 
-        // Twig doc: When the template cannot be found
         $this->expectException(\Error::class);
         $this->expectExceptionMessage('Call to undefined function Timber\apply_filters()');
 
@@ -80,7 +79,6 @@ class TimberPageRendererTest extends TestCase
             ->setTemplateFileExtension('twig.html')
             ->setTemplateName('syntactically_improper_content');
 
-        // Twig doc: When an error occurred during compilation.
         $this->expectException(\Error::class);
         $this->expectExceptionMessage('Call to undefined function Timber\trailingslashit()');
 
