@@ -18,7 +18,7 @@ class IndexPreconfiguredPageRenderer extends AbstractBasePreconfiguredPageRender
         $relativePath = __DIR__ . '/../../..';
 
         return [
-            'templates_dir_path' => $relativePath . '/site/templates/',
+            'templates_dir_path' => './site/templates/',
             'template_subdir_path' => '',
             'template_file_extension' => 'twig.html',
             'page_file_extension' => 'php',
