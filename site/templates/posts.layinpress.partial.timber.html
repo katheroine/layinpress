@@ -1,0 +1,10 @@
+<div id="liner">
+    <main>
+        {% if posts is not empty %}
+            {% for post in posts %}
+                {{ include('teaser.layinpress.partial.timber.html') }}
+            {% endfor %}
+        {% endif %}
+    </main>
+</div>
+

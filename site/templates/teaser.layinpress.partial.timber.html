@@ -1,0 +1,20 @@
+<img
+    src="{{ post.thumbnail.src('medium') }}"
+    alt="{{ post.thumbnail.alt }}"
+>
+
+<h2>
+    <a
+        href="{{ post.link }}"
+        aria-describedby="desc-{{ post.slug }}"
+    >{{ post.title }}</a>
+</h2>
+
+<p>{{ post.preview.length(50).force }}</p>
+
+<span
+    id="desc-{{ post.slug }}"
+    aria-hidden="true"
+>{{ post.date }}</span>
+
+<small>By {{ post.author }}</small>
