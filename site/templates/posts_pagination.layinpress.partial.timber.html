@@ -1,0 +1,17 @@
+{% if posts.pagination.prev %}
+    <a href="{{ site.link }}/index.php/page/{{ posts.pagination.current - 1 }}" class="prev {{ posts.pagination.prev.link|length ? '' : 'invisible' }}">Prev</a>
+{% endif %}
+<span class="pages">
+    {% for page in posts.pagination.pages %}
+        <span>{{ page.id }}
+            {% if page.link %}
+                <a href="{{ site.link }}/index.php/page/{{ page.title }}" class="{{ page.class }}">{{ page.title }}</a>
+            {% else %}
+                <span class="{{ page.class }}">{{ page.title }}</span>
+            {% endif %}
+        </span>
+    {% endfor %}
+</span>
+{% if posts.pagination.next %}
+    <a href="{{ site.link }}/index.php/page/{{ posts.pagination.current + 1 }}" class="next {{ posts.pagination.next.link|length ? '' : 'invisible' }}">Next</a>
+{% endif %}
