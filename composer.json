@@ -3,7 +3,7 @@
     "description": "WordPress theme based on Layin layout system.",
     "type": "wordpress-theme",
     "require": {
-        "katheroine/layin": "0.3.0",
+        "katheroine/layin": "0.4.0",
         "timber/timber": "^1.22"
     },
     "require-dev": {
