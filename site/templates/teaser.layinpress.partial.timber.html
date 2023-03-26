@@ -1,20 +1,21 @@
-<img
-    src="{{ post.thumbnail.src('medium') }}"
-    alt="{{ post.thumbnail.alt }}"
->
+<article class="post-teaser">
+    <img
+        src="{{ post.thumbnail.src('medium') }}"
+        alt="{{ post.thumbnail.alt }}"
+    >
 
-<h2>
-    <a
-        href="{{ post.link }}"
-        aria-describedby="desc-{{ post.slug }}"
-    >{{ post.title }}</a>
-</h2>
+    <h2>
+        <a
+            href="{{ post.link }}"
+            aria-describedby="desc-{{ post.slug }}"
+        >{{ post.title }}</a>
+    </h2>
+    <div class="date"
+        id="desc-{{ post.slug }}"
+        aria-hidden="true"
+    >{{ post.date }}</div>
 
-<p>{{ post.preview.length(50).force }}</p>
-
-<span
-    id="desc-{{ post.slug }}"
-    aria-hidden="true"
->{{ post.date }}</span>
-
-<small>By {{ post.author }}</small>
+    <section class="post-content">
+        <p>{{ post.preview.length(50).force }}</p>
+    </section>
+</article>
