@@ -20,7 +20,7 @@ class IndexPreconfiguredPageRenderer extends AbstractBasePreconfiguredPageRender
         return [
             'templates_dir_path' => './site/templates/',
             'template_subdir_path' => '',
-            'template_file_extension' => 'twig.html',
+            'template_file_extension' => 'timber.html',
             'page_file_extension' => 'php',
             'site_config_path' => $relativePath . '/site/config/site_config.yaml',
             'navigation_links_config_path' => $relativePath . '/site/config/navigation_links.yaml',

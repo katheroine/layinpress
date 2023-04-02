@@ -1,0 +1,50 @@
+article.post-teaser h2 
+{
+  margin-bottom: 0.3em;
+}
+
+article.post-teaser h2 a 
+{
+  text-decoration: none;
+  font-weight: 600;
+}
+
+article.post-teaser .date 
+{
+  padding-top: 0.5em;
+  border-top: 1px solid var(--content-normal-text-color);
+  text-align: right;
+}
+
+article.post-teaser img 
+{
+  height: auto;
+}
+
+.posts-pagination
+{
+  margin-top: calc(3 * var(--content-margin-horizontal));
+}
+
+.posts-pagination,
+.posts-pagination-pages
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+
+.posts-pagination .page-item
+{
+  padding: 0.4em 0.8em;
+  border-radius: 1em;
+  text-decoration: none;
+  background-color: var(--dark-violet);
+  color: white;
+}
+
+.posts-pagination .page-item.current
+{
+  background-color: var(--light-violet);
+}

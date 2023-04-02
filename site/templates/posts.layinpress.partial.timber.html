@@ -1,0 +1,10 @@
+{% if posts is not empty %}
+    {% for post in posts %}
+        {{ include('teaser.layinpress.partial.timber.html') }}
+    {% endfor %}
+{% endif %}
+
+<div class="posts-pagination">
+    {{ include('posts_pagination.layinpress.partial.timber.html') }}
+</div>
+

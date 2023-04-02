@@ -3,5 +3,27 @@
 <link type="text/css" rel="stylesheet" href="{{assets_dir}}/stylesheets/colors.layinpress.css">
 <link type="text/css" rel="stylesheet" href="{{assets_dir}}/stylesheets/colors-site.layinpress.css">
 <link type="text/css" rel="stylesheet" href="{{assets_dir}}/stylesheets/colors-site-accessibility.layinpress.css">
+<link type="text/css" rel="stylesheet" href="{{assets_dir}}/stylesheets/colors-content.layinpress.css">
+<link type="text/css" rel="stylesheet" href="{{assets_dir}}/stylesheets/colors-content-accessibility.layinpress.css">
 <link type="text/css" rel="stylesheet" href="{{assets_dir}}/stylesheets/link-icons.layinpress.css">
+<link type="text/css" rel="stylesheet" href="{{assets_dir}}/stylesheets/layout.layinpress.css">
+<link type="text/css" rel="stylesheet" href="{{assets_dir}}/stylesheets/content.swamp_violet.css">
+<link type="text/css" rel="stylesheet" href="{{assets_dir}}/stylesheets/content-accessibility.swamp_violet.css">
+<link type="text/css" rel="stylesheet" media="screen and (min-width: 0px)" href="{{assets_dir}}/stylesheets/content-s.swamp_violet.css">
+<link type="text/css" rel="stylesheet" media="screen and (min-width: 640px)" href="{{assets_dir}}/stylesheets/content-m.swamp_violet.css">
+<link type="text/css" rel="stylesheet" media="screen and (min-width: 1024px)" href="{{assets_dir}}/stylesheets/content-l.swamp_violet.css">
+<link type="text/css" rel="stylesheet" href="{{assets_dir}}/stylesheets/posts/post-teaser.layinpress.css">
 {% endblock stylesheets_custom %}
+{% block board %}
+<div id="liner" class="two-columns demo-layouts">
+  <main>
+  {% block main %}
+  {% endblock %}
+  </main>
+  <aside id="promo">
+  {% block promo %}
+  {% include 'promo.layinpress.partial.twig.html' %}
+  {% endblock %}
+  </aside>
+</div>
+{% endblock %}
