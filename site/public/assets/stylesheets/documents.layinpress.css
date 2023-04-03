@@ -1,0 +1,33 @@
+main article a.document
+{
+  display: flex;
+  align-items: center;
+  margin: var(--content-margin-horizontal) var(--content-margin-vertical);
+  padding: var(--content-blocks-padding-horizontal) var(--content-blocks-padding-vertical);
+  border: 2px dotted var(--middle-blue);
+  border-radius: var(--content-border-radius);
+  overflow: auto;
+  cursor: pointer;
+  user-select: none;
+  font-style: normal;
+  text-decoration: none;
+  font-size: 100%;
+  color: var(--light-blue);
+}
+
+main article a.document:before
+{
+  flex-shrink: 0;
+  width: var(--menu-button-icon-size);
+  height: var(--menu-button-icon-size);
+  background-size: var(--menu-button-icon-size);
+  background-repeat: no-repeat;
+  content: "";
+  background-image: url('../images/icons.layinpress/download.svg');
+}
+
+main article a.document .content
+{
+  flex-grow: 1;
+  margin-left: 0.8em;
+}
