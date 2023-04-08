@@ -13,6 +13,9 @@ namespace Katheroine\LayinPress\Preconfiguration;
 
 class IndexPreconfiguredPageRenderer extends AbstractBasePreconfiguredPageRenderer
 {
+    protected const WP_RELATIVE_PATH = __DIR__ . '/../../../../..';
+    protected const LAYIN_RELATIVE_PATH = __DIR__ . '/../../..';
+
     protected function providePreconfiguration(): array
     {
         $relativePath = __DIR__ . '/../../..';
@@ -24,7 +27,7 @@ class IndexPreconfiguredPageRenderer extends AbstractBasePreconfiguredPageRender
             'page_file_extension' => 'php',
             'site_config_path' => $relativePath . '/site/config/site_config.yaml',
             'navigation_links_config_path' => $this->provideNavigationLinksConfigPath(),
-            'contact_info_links_config_path' => $relativePath . '/site/config/contact_info_links.yaml',
+            'contact_info_links_config_path' => $this->provideContactInfoLinksConfigPath(),
             'base_url' => '../..',
             'subpages_url' => '',
             'assets_dir_path' => '/wp-content/themes/layinpress/site/public/assets',
@@ -34,15 +37,23 @@ class IndexPreconfiguredPageRenderer extends AbstractBasePreconfiguredPageRender
 
     protected function provideNavigationLinksConfigPath(): string
     {
-        $wpRelativePath = __DIR__ . '/../../../../..';
-        $configPath = $wpRelativePath . '/uploads/navigation_links.txt';
+        return $this->provideConfigPath('navigation_links');
+    }
+
+    protected function provideContactInfoLinksConfigPath(): string
+    {
+        return $this->provideConfigPath('contact_info_links');
+    }
+
+    protected function provideConfigPath(string $configName): string
+    {
+        $configPath = self::WP_RELATIVE_PATH . '/uploads/' . $configName . '.txt';
 
         if (file_exists($configPath)) {
             return $configPath;
         }
 
-        $layinRelativePath = __DIR__ . '/../../..';
-        $configPath = $layinRelativePath . '/site/config/navigation_links.yaml';
+        $configPath = self::LAYIN_RELATIVE_PATH . '/site/config/' . $configName . '.yaml';
 
         return $configPath;
     }
