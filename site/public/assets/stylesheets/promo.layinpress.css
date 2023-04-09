@@ -1,0 +1,13 @@
+#promo
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 3em;
+  flex-shrink: 1;
+}
+
+aside#promo a img
+{
+  border-radius: var(--content-border-radius);
+}
