@@ -25,6 +25,13 @@ use Timber\Timber;
  */
 class TimberPageRenderer extends AbstractPageRenderer
 {
+    private array $additionalTemplateParams = [];
+
+    public function addTemplateParam(string $paramName, $paramValue): void
+    {
+        $this->additionalTemplateParams[$paramName] = $paramValue;
+    }
+
     public function render()
     {
         Timber::$dirname = $this->templatesDirPath;
@@ -34,7 +41,7 @@ class TimberPageRenderer extends AbstractPageRenderer
             ob_start(); // Doesn't allow to echo rendered template.
             Timber::render($this->buildTemplatePath(), array_merge(
                 $context,
-                $this->templateParams
+                $this->buildTemaplateParams()
             ));
         } catch (\Exception $exception) {
             ob_flush();
@@ -53,5 +60,13 @@ class TimberPageRenderer extends AbstractPageRenderer
             . $this->templateName
             . '.'
             . $this->templateFileExtension;
+    }
+
+    private function buildTemaplateParams(): array
+    {
+        return array_merge(
+            $this->templateParams,
+            $this->additionalTemplateParams
+        );
     }
 }

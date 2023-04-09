@@ -11,7 +11,7 @@
 
 namespace Katheroine\LayinPress\Preconfiguration;
 
-
+use Katheroine\Layin\Loader\ConfiguredSeriesLoader;
 
 class IndexPreconfiguredPageRenderer extends AbstractBasePreconfiguredPageRenderer
 {
@@ -32,5 +32,13 @@ class IndexPreconfiguredPageRenderer extends AbstractBasePreconfiguredPageRender
             'assets_dir_path' => '/wp-content/themes/layinpress/site/public/assets',
             'is_debug_mode' => false,
         ];
+    }
+
+    protected function provideSideLinks(): array
+    {
+        $sideLinksLoader = new ConfiguredSeriesLoader($this->provideSideLinksPath());
+        $sideLinks = $sideLinksLoader->load();
+
+        return $sideLinks;
     }
 }

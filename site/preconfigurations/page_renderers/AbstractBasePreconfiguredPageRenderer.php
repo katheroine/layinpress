@@ -19,8 +19,13 @@ abstract class AbstractBasePreconfiguredPageRenderer extends AbstractVioletPreco
 {
     protected function providePageRenderer(): AbstractPageRenderer
     {
-        return new TimberPageRenderer();
+        $renderer = new TimberPageRenderer();
+        $renderer->addTemplateParam('side_links', $this->provideSideLinks());
+
+        return $renderer;
     }
 
     abstract protected function providePreconfiguration(): array;
+
+    abstract protected function provideSideLinks(): array;
 }
