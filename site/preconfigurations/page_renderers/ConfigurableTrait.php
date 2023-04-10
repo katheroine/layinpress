@@ -11,8 +11,6 @@
 
 namespace Katheroine\LayinPress\Preconfiguration;
 
-use Katheroine\Layin\Loader\ConfiguredSeriesLoader;
-
 trait ConfigurableTrait
 {
     protected const WP_RELATIVE_PATH = __DIR__ . '/../../../../..';
@@ -33,6 +31,11 @@ trait ConfigurableTrait
         return $this->provideConfigPath('contact_info_links');
     }
 
+    protected function provideSideLinksPath(): string
+    {
+        return $this->provideConfigPath('side_links');
+    }
+
     protected function provideConfigPath(string $configName): string
     {
         $configPath = self::WP_RELATIVE_PATH . '/uploads/' . $configName . '.txt';
@@ -44,10 +47,5 @@ trait ConfigurableTrait
         $configPath = self::LAYIN_RELATIVE_PATH . '/site/config/' . $configName . '.yaml';
 
         return $configPath;
-    }
-
-    protected function provideSideLinksPath(): string
-    {
-        return self::WP_RELATIVE_PATH . '/uploads/side_links.txt';
     }
 }
