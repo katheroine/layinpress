@@ -11,11 +11,22 @@
 
 namespace Katheroine\LayinPress\Preconfiguration;
 
+use Katheroine\Layin\Renderer\AbstractPageRenderer;
+use Katheroine\Layin\Renderer\AbstractVioletPreconfiguredPageRenderer;
+use Katheroine\LayinPress\Renderer\TimberPageRenderer;
 use Katheroine\Layin\Loader\ConfiguredSeriesLoader;
 
-class IndexPreconfiguredPageRenderer extends AbstractBasePreconfiguredPageRenderer
+class LayinPressPreconfiguredPageRenderer extends AbstractVioletPreconfiguredPageRenderer
 {
     use ConfigurableTrait;
+
+    protected function providePageRenderer(): AbstractPageRenderer
+    {
+        $renderer = new TimberPageRenderer();
+        $renderer->addTemplateParam('side_links', $this->provideSideLinks());
+
+        return $renderer;
+    }
 
     protected function providePreconfiguration(): array
     {
